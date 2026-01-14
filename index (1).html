@@ -1,0 +1,186 @@
+DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Christian Olivas Portfolio</title>
+  <style>
+    body {
+      font-family: "Georgia", serif;
+      margin: 0;
+      padding: 0;
+      background: #fff5f8; /* soft pink background */
+      color: #333;
+    }
+
+    header {
+      text-align: center;
+      padding: 20px;
+      background: #fbe3ec; /* light pink */
+      border-bottom: 3px dotted #e5a9b6;
+    }
+
+    header h1 {
+      margin: 0;
+      color: #a83d63;
+    }
+
+    nav {
+      margin-top: 10px;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #a83d63;
+      margin: 0 10px;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      color: #d94f7d;
+    }
+
+    section {
+      padding: 30px;
+      max-width: 800px;
+      margin: auto;
+    }
+
+    section h2 {
+      color: #a83d63;
+      border-bottom: 2px dotted #e5a9b6;
+      padding-bottom: 5px;
+    }
+
+    .home {
+      text-align: center;
+    }
+
+    .home img {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      border: 3px solid #e5a9b6;
+      margin-top: 10px;
+    }
+
+    .skills-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 15px;
+    }
+
+    .skill {
+      background: #fbe3ec;
+      padding: 10px 15px;
+      border-radius: 15px;
+      border: 1px solid #e5a9b6;
+      color: #a83d63;
+      font-weight: bold;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-top: 15px;
+    }
+
+    input, textarea {
+      padding: 10px;
+      border: 1px solid #e5a9b6;
+      border-radius: 8px;
+      font-family: inherit;
+    }
+
+    button {
+      background: #a83d63;
+      color: white;
+      border: none;
+      padding: 10px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    button:hover {
+      background: #d94f7d;
+    }
+
+    footer {
+      text-align: center;
+      padding: 15px;
+      background: #fbe3ec;
+      border-top: 3px dotted #e5a9b6;
+      color: #a83d63;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Christian Olivas</h1>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#about">About Me</a>
+      <a href="#skills">Skills</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <!-- Home Section -->
+  <section id="home" class="home">
+    <h2>Welcome</h2>
+    <p>Hello, I'm <strong>Christian Olivas</strong> — a frontend developer who loves creating elegant, user-friendly designs.</p>
+    <!-- Change profile.jpg to your real image -->
+    <img src="https://imgur.com/fRcSmfV.jpeg"= Profile Picture of Christian Olivas" onerror="this.src='https://via.placeholder.com/150/FFC0CB/333?text=Marianne'">
+ "
+  </section>
+  <!-- About Section -->
+  <section id="about">
+    <h2>About Me</h2>
+    <p>I am passionate about web design and development. My goal is to build websites that are simple, aesthetic, and accessible for everyone.</p>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills">
+    <h2>Skills</h2>
+    <div class="skills-list">
+      <div class="skill">HTML</div>
+      <div class="skill">CSS</div>
+      <div class="skill">JavaScript</div>
+      <div class="skill">Responsive Design</div>
+      <div class="skill">UI/UX</div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>Feel free to reach me through this form:</p>
+    <form onsubmit="return sendMessage(event)">
+      <input type="text" id="name" placeholder="Your Name Christian Olivas" required>
+      <input type="email" id="email" placeholder="Your Email" required>
+      <textarea id="message" rows="4" placeholder="Your Message" required></textarea>
+      <button type="submit">Send</button>
+      <p id="status"></p>
+    </form>
+  </section>
+
+  <footer>
+    © <span id="year"></span> Christian Olivas | All Rights Reserved
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    function sendMessage(e) {
+      e.preventDefault();
+      document.getElementById("status").textContent = "Thank you! Your message has been sent (demo only).";
+      e.target.reset();
+      return false;
+    }
+  </script>
+</body>
+</html>
